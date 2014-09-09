@@ -1,5 +1,5 @@
 ---
-title: Categories
+title: Ŀ¼
 layout: page
 ---
 
