@@ -1,5 +1,5 @@
 ---
-title: Ŀ¼
+title: 目录
 layout: page
 ---
 
