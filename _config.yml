@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
-url: http://www.xile15.com
+url: http://sunpander.github.io/
 author: sunpander
 pygments: true
 paginate: 24
