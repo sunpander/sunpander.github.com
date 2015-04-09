@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<!-- saved from url=(0090)http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=1000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Views and Layouts</title>
+    <!--<base href="http://js.devexpress.com/">--><base href=".">
+    <meta charset="utf-8">
+    <meta name="description">
+    <link rel="search" type="application/opensearchdescription+xml" title="DevExtreme" href="http://js.devexpress.com/DevExtremeSearch.xml">
+    <link rel="shortcut icon" type="image/x-icon" href="http://js.devexpress.com/favicon.ico">
+
+    <!--[if lt IE 9]>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" async="" src="./Views and Layouts_files/ga.js"></script><script src="./Views and Layouts_files/jquery.min.js"></script>
+    <!--<![endif]-->
+    <link href="http://js.devexpress.com/Content/Css2/lessBundle2?v=B5l3rE1isAzZRza1dKNa-VdIlCZOYhaV8C3yGjU8WC81" rel="stylesheet">
+
+<link href="http://js.devexpress.com/Content/Css2/Docs/docLessBundle?v=MrsPmozgg0drSjZjX3PZYF0GPm9LnOG0nQo3oiifQsw1" rel="stylesheet">
+
+    <script src="./Views and Layouts_files/globalize.min.js"></script>
+    <script src="./Views and Layouts_files/dx.webappjs.js"></script>
+    <script src="./Views and Layouts_files/jsBundle2"></script>
+
+
+    <link href="http://cdn3.devexpress.com/jslib/14.1.9/css/dx.common.css" rel="stylesheet">
+    <link href="http://cdn3.devexpress.com/jslib/14.1.9/css/dx.light.css" rel="stylesheet">
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1384678-1']);
+    _gaq.push(['_setDomainName', 'devexpress.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    window.trackGAEvent = function(event, license, source) {
+        _gaq.push(["_trackEvent", event, license, source]);
+    };
+</script>
+</head>
+<body class="mainBack docs">
+    <div id="header">
+        <div class="menu-button">
+            <div class="menu-image"></div>
+        </div>
+        <a class="logo devextreme" href="http://js.devexpress.com/" id="HrefDevExtreme"></a>
+        <a href="http://js.devexpress.com/" id="HrefDevExtreme" class="logoProduct logo empty"></a>
+
+        <div id="loading">
+            Loading...
+        </div>
+        <div class="buy">
+                <a href="http://js.devexpress.com/Buy/" id="Buy" class="menu-link">BUY NOW</a>
+
+        </div>
+        <div class="download">
+            <a onclick="trackGAEvent(&#39;Download Trial&#39;, &#39;Complete&#39;, &#39;Menu&#39;);" href="https://go.devexpress.com/DevExpressDownload_DevExtremeCompleteTrial.aspx" target="_blank">DOWNLOAD FREE TRIAL</a>
+        </div>
+        <div class="chat disabled" id="ChatButton">
+            <span>CHAT WITH US</span>
+        </div>
+        
+
+        
+
+    </div>
+    <div id="body" class="transition white ">
+            <div id="sideMenu">
+        <div class="side-menu-inner">
+            <ul class="menu-list">
+                <li>
+                        <a href="http://js.devexpress.com/" id="DevExtreme" class="menu-link">DevExtreme</a>
+
+                    <ul class="sub-menu">
+                        <li>    <a href="http://js.devexpress.com/MobileDevelopment/" id="MobileDevelopment" class="menu-link">Mobile Development</a>
+</li>
+                        <li>    <a href="http://js.devexpress.com/WebDevelopment/" id="WebDevelopment" class="menu-link">Web Development</a>
+</li>
+                    </ul>
+                </li>
+                <li>
+                        <a href="http://js.devexpress.com/New/14_2/" id="14_2" class="menu-link">What's New</a>
+
+                </li>
+                <li>
+                    <a href="http://js.devexpress.com/Documentation/Overview/">Documentation</a>
+                </li>
+                <li>
+                    <a href="http://www.devexpress.com/Support/Center/Question/List/1" target="_blank">Support</a>
+                </li>
+                <li>
+                    <a href="http://js.devexpress.com/ThemeBuilder/" target="_blank">Theme Builder</a>
+                </li>
+                <li>
+                        <a href="http://js.devexpress.com/Blogs/" id="Blogs" class="menu-link">Blogs</a>
+
+                </li>
+                <li>
+                        <a href="http://js.devexpress.com/Buy/" id="Buy" class="menu-link">Buy</a>
+
+                </li>
+                <li>
+                        <a href="http://js.devexpress.com/Licensing/" id="Licensing" class="menu-link">Licensing</a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="menuHider"></div>
+
+        <div id="overlayWrapper" class="mainBack">
+            <div id="overlay">
+            </div>
+        </div>
+        <div id="menu">
+        </div>
+        <div class="page-wrapper">
+            <div id="page">
+                
+
+
+<link href="http://js.devexpress.com/Content/Css2/tools/docCssBundle?v=wzULF5BQgViitXxSqe-x6A3bPK6zcPRjLgRFPuaoPNo1" rel="stylesheet">
+
+<link href="http://js.devexpress.com/Content/Css2/Docs/docLessBundle?v=MrsPmozgg0drSjZjX3PZYF0GPm9LnOG0nQo3oiifQsw1" rel="stylesheet">
+
+<script src="./Views and Layouts_files/docJsBundle"></script>
+
+
+
+
+
+
+
+
+<div id="docmenu" class="fixed">
+        <ul class="main-menu ">
+                <li><a class=" menu-link" href="http://js.devexpress.com/Documentation/Tutorials/?version=14_2">Tutorials</a></li>
+                <li><a class="active menu-link" href="http://js.devexpress.com/Documentation/Howto/?version=14_2">Guides</a></li>
+                <li><a class=" menu-link" href="http://js.devexpress.com/Documentation/ApiReference/?version=14_2">Reference</a></li>
+        </ul>
+
+
+    <div class="tools-panel">
+
+
+
+
+        <div class="filter-item search-item">
+            <form class="search" action="http://js.devexpress.com/Documentation/Search/" method="get">
+                <div id="search-input">
+                    <input class="search-text" type="text" name="text" placeholder="Type your keywords..." autocomplete="off">
+                    <span class="search-item-count"></span>
+                    <span class="search-arrows">
+                        <span class="up search-arrow"></span>
+                        <span class="down search-arrow"></span>
+                    </span>
+                </div>
+                <div class="search-button">
+                    <div id="closeButton" title="Clear Search"></div>
+                    <input id="searchButton" class="active" type="image" src="./Views and Layouts_files/search.png" alt="Search">
+                </div>
+            </form>
+        </div>
+
+
+        
+        <div class="filter-item settings">
+
+            <div class="settings-tooltip">
+                <div class="tail1 tail"></div>
+                <div class="tail2 tail"></div>
+                <div class="tolltip-content">
+                    <h3></h3>
+                    <div class="text">
+                    </div>
+                    <div class="close"></div>
+                </div>
+            </div>
+            <div class="settings-content">
+                <h3>Settings</h3>
+                <div class="controls">
+                        <div class="label">Product</div>
+                        <div class="select-box product">
+                            <span>DevExtreme Complete</span>
+                            <ul class="filter">
+                                    <li data-value="DevExtreme" class="available selected" title="">
+                                        DevExtreme Complete
+                                    </li>
+                                    <li data-value="PhoneJS" class="available " title="">
+                                        DevExtreme Mobile
+                                    </li>
+                                    <li data-value="ChartJS" class="available " title="">
+                                        DevExtreme Web
+                                    </li>
+                            </ul>
+                        </div>
+                                            <div class="label">Version</div>
+                        <div class="select-box version">
+                            <span>14.2</span>
+                            <ul class="filter">
+                                    <li data-value="14_2" class="selected">14.2</li>
+                                    <li data-value="14_1" class="">14.1</li>
+                                    <li data-value="13_2" class="">13.2</li>
+                                    <li data-value="13_1" class="">13.1</li>
+                            </ul>
+                        </div>
+
+                    <div class="label">Preferred Binding Approach</div>
+                    <div class="select-box approach">
+                        <span>Knockout</span>
+                        <ul class="filter">
+                                <li data-value="AngularJS" class="">AngularJS</li>
+                                <li data-value="Knockout" class="selected">Knockout</li>
+                                <li data-value="jQuery" class="">jQuery</li>
+                        </ul>
+                    </div>
+
+                    <div class="checkbox deprecated">
+                        <span class="check "></span> <span class="text">Show Deprecated API</span>
+                    </div>
+
+
+                    <div class="buttons">
+                        <div class="button-group">
+                            <div class="button" title="Close without saving" id="notSaveSettings">Cancel</div>
+                            <div class="button" title="Save changes" id="saveSettings">OK</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            var settings = new Site.Settings("14_2", "DevExtreme", "Knockout", "False");
+            settings.init();
+            
+            var versions = '13_1,13_2,14_1,14_2'.split(",");
+            Site.initializeDocVersion("14_2", "14_2", versions);
+        </script>
+        
+
+
+    </div>
+
+</div>
+
+
+<div id="left-menu-button"></div>
+<div class="content">
+    <div class="container article-container">
+        <div class="left-menu-wrapper">
+            <div class="left-menu-container articles-menu">
+                <div class="gray-border">
+                            <ul class="autoRefresh">
+            <li class="">
+                <a class="first-item-partition 
+                    
+                    active-item" href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Views_and_Layouts" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Views_and_Layouts" style="padding-left: 0px">Views and Layouts</a>
+                        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Define_a_View" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Define_a_View" style="padding-left: 0px">Define a View</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Add_a_Partial_View" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Add_a_Partial_View" style="padding-left: 0px">Add a Partial View</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Define_Layouts" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Define_Layouts" style="padding-left: 0px">Define Layouts</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Insert_View_into_Layout" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Insert_View_into_Layout" style="padding-left: 0px">Insert View into Layout</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Context_Specific_Markup" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Context_Specific_Markup" style="padding-left: 0px">Context Specific Markup</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Add_Commands_to_Views" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Add_Commands_to_Views" style="padding-left: 0px">Add Commands to Views</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#View_Life_Cycle" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#View_Life_Cycle" style="padding-left: 0px">View Life Cycle</a>
+                
+            </li>
+        </ul>
+        <ul class="autoRefresh">
+            <li class="line">
+                <a class=" 
+                    first-item
+                    " href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Handle_View_Events" data-hash="/Documentation/Howto/SPA_Framework/Views_and_Layouts/?version=14_2#Handle_View_Events" style="padding-left: 0px">Handle View Events</a>
+                
+            </li>
+        </ul>
+
+            </li>
+        </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="resizable-content">
+
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h1 class="article-header" id="Views_and_Layouts">Views and Layouts</h1>
+                    
+                    <div class="onlyChildHelper">
+                        <p>As discussed in the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Application_Project?version=14_2">Application Project</a> article, an application built with the DevExtreme SPA framework is a single-page application. While such an application has only one web page, it can comprise several application screens defined as named <strong>views</strong>. A view is defined by a piece of HTML markup that forms the view template. This view template can optionally have JavaScript code and associated style sheets used to customize the look and feel.</p>
+
+<p>Following the MVVM pattern, the view's markup template and style sheets serve as a <em>View</em>. The JavaScript function that is associated with the view prepares the <em>ViewModel</em> and performs the additional actions necessary to set up the view. These actions include interaction with the <em>Model</em> (a JavaScript object providing data, e.g. from a web server) and post-processing of the rendered view. The following diagram demonstrates this.</p>
+
+<p><img src="./Views and Layouts_files/Views-and-Layouts.png" alt="Application Structure"></p>
+
+<p>As you can see, a view's markup template is combined with other HTML elements defined within a <em>layout</em>'s markup, which results in the rendering of the final view. You will learn how to define views and how to use custom or predefined layouts below.</p>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Define_a_View">Define a View</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>A view has a unique name that serves as an identifier. The view name is encoded into the fragment identifier of the application URL. The framework uses this name to find the view's HTML markup and the JavaScript function that returns the view's ViewModel.</p>
+
+<p>To implement a view's HTML markup, add a <strong>div</strong> element and include the required markup in it. Set the <strong>div</strong> element's <strong>data-options</strong> attribute to <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxView?version=14_2">dxView</a>, and specify the required <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxView/Configuration?version=14_2">view markup options</a>.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: { name: 'home', title: 'Home' }"&gt;
+    &lt;!-- View markup goes here --&gt;
+    &lt;h1&gt;'Welcome!'&lt;/h1&gt;
+&lt;/div&gt;</pre></div>
+
+<p>The view's markup may have <a href="http://knockoutjs.com/documentation/binding-syntax.html">bindings</a> to the fields of the view's <strong>ViewModel</strong>. Implement the ViewModel as an object returned by a JavaScript function. This function must have the view's name and must be declared within the application's <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#namespace">namespace</a>.</p>
+
+<p><img src="./Views and Layouts_files/DefineAView.png" alt="View and Layout Merging"></p>
+
+<p>The ViewModel may get the required data from the view's <strong>Model</strong> - a JavaScript object in a general case. However, there may be scenarios when the ViewModel prepares data by itself.</p>
+
+<p>Within the function that returns a ViewModel, you can use the information that is passed when navigating to the view. This information is accessible using the following parameters of the function.</p>
+
+<ul>
+<li><p><strong>Navigation parameters</strong><br>
+When navigating to a view, extra navigation parameters can be specified in addition to the name of the target view. These parameters conform to the application's <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Navigation_and_Routing?version=14_2#Declare_a_Routing">routing format</a>. You can access these navigation parameters as the fields of the object passed as the first parameter of the function that returns the ViewModel of the target view. To see an example, refer to the <a href="http://js.devexpress.com/Documentation/Tutorial/SPA_Framework/Your_First_Application?version=14_2#Pass_a_Parameter_to_a_View">Pass a Parameter to a View</a> step of the <strong>Your First Application</strong> tutorial.</p></li>
+<li><p><strong>View info</strong><br>
+The second parameter passed as the function's parameter represents an object that specifies the information that is gathered on the view by the time the function is called. The following fields of this object are accessible: <strong>key</strong>, <strong>viewName</strong>, <strong>uri</strong>, <strong>routeData</strong>, <strong>canBack</strong> and <strong>previousViewInfo</strong>.</p></li>
+</ul>
+
+<p><strong>NOTE</strong>: As you can see, binding to the ViewModel is organized using the Knockout framework. Generally, the <a href="http://knockoutjs.com/documentation/observables.html">ko.applyBindings()</a> method should be called to activate Knockout. However, this method is called in DevExtreme applications internally. So you don't have to call this method in your code. At the same time, don't forget about this method, because when you insert a markup with the data-bind syntax dynamically, you will have to call the <strong>ko.applyBindings()</strong> method manually to initialize bindings.</p>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Add_a_Partial_View">Add a Partial View</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>You can display a view inside another view to reuse a markup (similar to partial rendering in ASP.NET MVC or ASP.NET user controls). To do so, create an empty <strong>div</strong> element inside a view's markup. To declare this element as the place where a specified view will be rendered, set the element's <strong>data-options</strong> attribute to <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxViewPlaceholder?version=14_2">dxViewPlaceholder</a> and pass the name of the view to be rendered.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: {name: 'header'}&gt;
+    &lt;h1 data-bind="text: message"&gt;&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div data-options="dxView: {name: 'home'}&gt;
+    &lt;div data-options="dxViewPlaceholder: { viewName: 'header' }"&gt;&lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- View contents --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>The partial view can be bound to its own ViewModel by using the <a href="http://knockoutjs.com/documentation/with-binding.html">"with" binding</a>. This ViewModel can be the object assigned to the field of the parent view's ViewModel. Here is an example:</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: {name: 'credentials'}&gt;
+    &lt;p data-bind="with: person"&gt;
+        Name: &lt;span data-bind="text: name"&gt; &lt;/span&gt;,
+        Surname: &lt;span data-bind="text: surname"&gt; &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+&lt;div data-options="dxView: {name: 'home'}&gt;
+    &lt;div data-options="dxViewPlaceholder: { viewName: 'credentials' }"&gt;&lt;/div&gt;
+    &lt;div&gt;
+        &lt;!-- View contents --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+ <!---->
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">MyApp.home = function (params) {
+    var viewModel = {
+        title: ko.observable('Home'),
+        person: {
+            name: params.name,
+            surname: params.surname
+        }
+    };
+    return viewModel;
+};</pre></div>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Define_Layouts">Define Layouts</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>Normally, there is a commonality between application screens. In the following image, a toolbar and navigation bar are located on each screen.</p>
+
+<p><img src="./Views and Layouts_files/commonLayoutInScreens.png" alt="View Merged into Layout"></p>
+
+<p>The framework allows you to organize some structure for each screen. This structure is called <strong>layout</strong>. It is defined once by a markup declared as a <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxLayout?version=14_2">dxLayout</a> markup component. This markup includes so-called placeholders for the varying content. In the image above, the list on the first screen is changed to another list on the second screen and to a set of fields on the third screen. In addition, the title and a set of buttons on the toolbar are changed from screen to screen. The changing content is defined within the <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxViewPlaceholder?version=14_2">dxView</a> markup component. When navigating to a view, the markup of the corresponding <strong>dxView</strong> template is merged with the markup of the required <strong>dxLayout</strong> component. The resulting markup is then rendered as a page.</p>
+
+<p><img src="./Views and Layouts_files/NavbarLayoutAndViewGathering.png" alt="View Merged into Layout"></p>
+
+<p>To define a layout, add a <strong>div</strong> element and include the required markup in it. Set the <strong>div</strong> element's <strong>data-options</strong> attribute to <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxLayout?version=14_2">dxLayout</a>, and specify the required <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxLayout/Configuration?version=14_2">layout markup options</a>.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}"&gt;
+    &lt;!-- Layout markup goes here --&gt;
+&lt;/div&gt;</pre></div>
+
+<p>To add a placeholder to a layout, add a <strong>div</strong> element, set the <strong>data-options</strong> attribute to <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxContentPlaceholder?version=14_2">dxContentPlaceholder</a> and specify the required <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxContentPlaceholder/Configuration?version=14_2">placeholder markup options</a>.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}"&gt;
+    &lt;!-- Layout markup goes here --&gt;
+    &lt;div data-options="dxContentPlaceholder: {name: 'content'}" &gt;&lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>In the following image, you can see that a layout may include static content. This content is not changed from  view to view. However, the content in placeholders is changing. When an application navigates to a view, the view's <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#Insert_View_into_Layout">content</a> is merged with the content of the layout content placeholders.</p>
+
+<p><img src="./Views and Layouts_files/ContentPlaceholders.png" alt="Content Placeholders"></p>
+
+<p>Since there can be several placeholders in a layout, their content will be shown sooner or later depending on the difficulty of the inner elements. So to show the entire changing content at once, wrap all the content placeholders by a div element and apply the <strong>data-options</strong> attribute set to <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxTransition?version=14_2">dxTransition</a>. </p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}&gt;
+    &lt;div data-options="dxTransition: { name: 'main', type: 'slide' }"&gt;
+        &lt;div data-options="dxContentPlaceholder : { name: 'header' } " &gt;&lt;/div&gt;
+        &lt;div data-options="dxContentPlaceholder: {name: 'content' }"&gt;&lt;/div&gt;
+        &lt;div data-options="dxContentPlaceholder : { name: 'footer' } " &gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>Note that a transition element unites changing content. The markup outside this element is static.</p>
+
+<p><img src="./Views and Layouts_files/TransitionElement.png" alt="Transition Element"></p>
+
+<p>Use the <strong>dxTransition</strong> component's <strong>type</strong> configuration option to set the type of the transition animation - 'slide', 'fade', 'overflow' or 'none'. The specified transition effect will appear when the content that is rendered to the placeholders is changed.</p>
+
+<p>To set a specific transition effect for a specific placeholder, set the <b>transition</b> option of the placeholder's markup to 'slide', 'fade', 'overflow' or 'none'.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}&gt;
+    &lt;div data-options="dxContentPlaceholder: {name: 'content', transition:'slide'}"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>In addition to an HTML markup, a layout is accompanied by CSS style sheets and is managed by a JavaScript controller. Generally, there is a base <strong>DefaultLayoutController</strong> that manages the process of showing views, navigation and transitions between views. To bind this controller with your layout markup, create an instance of this controller passing an object with the specified <strong>layoutTemplateName</strong> field as a constructor parameter. Then, add this controller to the application's <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#layoutSet">layout set</a> defining a navigation context for this controller. Here is an example.</p>
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">window.AppNamespace = {};
+$(function () {
+AppNamespace.myController = new DevExpress.framework.html.DefaultLayoutController({ layoutTemplateName: "myLayout" })     
+    AppNamespace.app = new DevExpress.framework.html.HtmlApplication({
+        namespace: AppNamespace,
+        layoutSet: [
+            { platform: 'ios', phone: true, root: false, controller: AppNamespace.myController }
+        ]
+    });
+    AppNamespace.app.router.register(":view/:name", { view: "home", name: '' });
+    AppNamespace.app.navigate();
+});</pre></div>
+
+<p>You can inherit from the <strong>DefaultLayoutController</strong> to override the basic functionality, if required. In this instance, you can bind a layout template within your controller. To take into account the custom controller, register its instance within the <strong>layoutSet</strong> list.</p>
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">myController = DevExpress.framework.html.DefaultLayoutController.inherit({
+    //your implementation here
+});
+AppNamespace.app = new DevExpress.framework.html.HtmlApplication({
+    namespace: AppNamespace,
+    layoutSet: [
+        { platform: 'ios', phone: true, root: false, controller: new myController() }
+    ]
+});
+AppNamespace.app.router.register(":view/:name", { view: "home", name: '' });
+AppNamespace.app.navigate();</pre></div>
+
+<p>As a rule, you will not have to define layouts for your views. The framework comes with predefined layout sets. When a view is displayed, an appropriate layout controller from the application's layout set is used to render a layout markup for this view. To learn more about predefined layout sets, refer to the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Built-in_Layouts?version=14_2">Built-in Layouts</a> article.</p>
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">$(function() {
+    app = new DevExpress.framework.html.HtmlApplication({
+        layoutSet: DevExpress.framework.html.layoutSets['navbar'],
+    });
+});</pre></div>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Insert_View_into_Layout">Insert View into Layout</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>When defining a view, specify the layout placeholder to which the view's markup will be rendered. To do this, wrap the required markup of the view by a <strong>div</strong> element, denote this element as the <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxContent?version=14_2">dxContent</a> component and pass the name of the required placeholder as the <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxContent/Configuration?version=14_2#targetPlaceholder">targetPlaceholder</a> option of this component. </p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}"&gt;
+    &lt;!-- Layout markup goes here --&gt;
+    &lt;div data-options="dxContentPlaceholder: {name: 'content'}"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-options="dxView: { name: 'home', title: 'Home' }"&gt;
+    &lt;div data-options="dxContent: {  targetPlaceholder: 'content')"&gt;
+        &lt;h1 data-bind="text: message"&gt;&lt;/h1&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>When you require different parts of a view to be displayed in different placeholders, wrap each part by the <strong>dxContent</strong> div and specify the required placeholder for it.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxLayout: { name: 'myLayout'}"&gt;
+    &lt;div data-options="dxContentPlaceholder: {name: 'content1'}"&gt;&lt;/div&gt;
+    &lt;!-- Layout markup goes here --&gt;
+    &lt;div data-options="dxContentPlaceholder: {name: 'content2'}"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-options="dxView: { name: 'home', title: 'Home' }"&gt;
+    &lt;div data-options="dxContent: {  targetPlaceholder: 'content1')"&gt;
+        &lt;!-- View markup goes here --&gt;
+    &lt;/div&gt;
+    &lt;div data-options="dxContent: {  targetPlaceholder: 'content2')"&gt;
+        &lt;!-- View markup goes here --&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p><strong>NOTE</strong>: If you wrap a view's content by a dxContent element, only the markup inside of the dxContent element(s) will be rendered to the resulting view. Read the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#View_Life_Cycle">View Life Cycle</a> topic below for details.</p>
+
+<p>The following image illustrates how the content of a dxView markup component is merged to a placeholder of the dxLayout markup component to prepare a final markup for the view.</p>
+
+<p><img src="./Views and Layouts_files/DefineLayout1.png" alt="View and Layout Merging"></p>
+
+<p>In some cases, you may be required to add a placeholder to a dxView component and define the content for this placeholder within a dxLayout component. The resulting view markup will be generated in the same manner - by merging the dxView and dxLayout markups.</p>
+
+<p><img src="./Views and Layouts_files/DefineLayout2.png" alt="View and Layout Merging"></p>
+
+<p>For instance, the "Navbar" and "Slideout" <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Built-in_Layouts?version=14_2">predefined layouts</a> include the "dxContent: {  targetPlaceholder: 'view-footer')" component in the "iOS" version. To render the markup of this component, the view that uses one of these layouts must include the "dxContentPlaceholder: { name: 'view-footer')" component in its markup.</p>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Context_Specific_Markup">Context Specific Markup</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>You can define view and layout HTML templates for specific contexts. When running an application, the HTML template that is most appropriate for the current context will be used to display a view. Below, you will learn how to define templates specific for different contexts.</p>
+
+<p><strong>NOTE</strong>: Be sure to provide view templates that are not simultaneously functional in a specific context. For instance, both a template for the iOS platform and a template for the iPhone will work when an application runs on an iPhone device. When several templates may be appropriate for a view, an exception will be raised. To avoid such scenarios, define a single common template or multiple templates that are as specific as possible.</p>
+
+<h4>Device Specific Markup</h4>
+
+<p>You can define multiple views/layouts with the same name that are targeted for different devices. To set a target device for a view/layout, use the fields of the <a href="http://js.devexpress.com/Documentation/ApiReference/Common_Object_Structures/device?version=14_2">device</a> object as markup options of the <strong>dxView</strong>/<strong>dxLayout</strong> components.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: { name: 'home', platform: 'ios', phone: true }"&gt;
+    This is a view for an iPhone.
+&lt;/div&gt;
+
+&lt;div data-options="dxView: { name: 'home', platform: 'ios', tablet: true }"&gt;
+    This is a view for an iPad.
+&lt;/div&gt;</pre></div>
+
+<p>As you can see, you can specify the target platform as well as the device type.</p>
+
+<p>A DevExtreme application, when running, retrieves information about the device from the browser. Thus, the application will display the views and layouts that are most appropriate for the used device, and will then apply the style sheets that correspond to this device.</p>
+
+<p>See a step-by-step example in the <a href="http://js.devexpress.com/Documentation/Tutorial/SPA_Framework/Define_Device-Specific_View_Markup?version=14_2#Define_Device-Specific_View_Markup">Define Device-Specific View Markup</a> tutorial.</p>
+
+<h4>Orientation Specific Markup</h4>
+
+<p>You can define view templates that are specific to the 'portrait' and 'landscape' device orientations. To set a target device orientation for a view, use the <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxView/Configuration?version=14_2#orientation">orientation</a> configuration option of the corresponding <strong>dxView</strong> markup component. In the following example, the 'home' view will have data displayed using the <a href="http://js.devexpress.com/Documentation/ApiReference/UI_Widgets/dxList?version=14_2">dxList</a> widget when the device on which the application is currently displayed has a 'portrait' orientation. When changing the device orientation to 'landscape', the 'home' view will be rerendered. In the newly applied HTML template, data will be displayed using the <a href="http://js.devexpress.com/Documentation/ApiReference/UI_Widgets/dxTileView?version=14_2">dxTileView</a> widget. When rotating the device back to the 'portrait' orientation, the view will be rerendered and will display data using the <strong>dxList</strong> widget again.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView : { name: 'home', title: 'Home', orientation: 'portrait' } " &gt;
+    &lt;div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " &gt;
+        &lt;div data-bind="dxList: { dataSource: dataSource }"&gt;
+            &lt;div data-options="dxTemplate : { name: 'item' } " &gt;
+                &lt;div class="product-image-box"&gt;
+                    &lt;img data-bind="attr: { src: Image, alt: Name }" /&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;div data-bind="text: Name"&gt;&lt;/div&gt;
+                    &lt;div&gt;&lt;strong data-bind="text: Globalize.format(Price, 'c2')"&gt;&lt;/strong&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-options="dxView : { name: 'home', title: 'Home', orientation: 'landscape' } " &gt;
+    &lt;div class="home-view"  data-options="dxContent : { targetPlaceholder: 'content' } " &gt;
+        &lt;div data-bind="dxTileView: { dataSource: dataSource, height: '100%', baseItemHeight: 140, baseItemWidth: 140 }"&gt;
+            &lt;div data-options="dxTemplate : { name: 'item' } " class="gallery-item"&gt;
+                &lt;img data-bind="attr: { src: Image, alt: Name }" /&gt;
+                &lt;div data-bind="text: Name"&gt;&lt;/div&gt;
+                &lt;div&gt;&lt;strong data-bind="text: Globalize.format(Price, 'c2')"&gt;&lt;/strong&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p><a href="http://www.youtube.com/watch?v=4DD3vdD-1TM&list=PL8h4jt35t1wjGvgflbHEH_e3b23AA30-z&index=34" class="button orange small fix-width-155" style="margin-right: 20px;">Watch Video</a></p>
+
+<h4>Custom Context Specific Markup</h4>
+
+<p>You can introduce a custom context for a view template by specifying a custom option within the configuration object of the corresponding dxView markup component. In the following example, the 'home' view has two HTML templates - for day and night.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView : { name: 'home', title: 'Home', timeOfDay: 'day' } " &gt;
+    &lt;div data-options="dxContent : { targetPlaceholder: 'content' } " &gt;
+        &lt;p&gt;It's time to work&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div data-options="dxView : { name: 'home', title: 'Home', timeOfDay: 'night' } " &gt;
+    &lt;div data-options="dxContent : { targetPlaceholder: 'content' } " &gt;
+        &lt;p&gt;It's time to sleep&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>To notify the application that the <strong>timeofDay</strong> context has changed, access the application's <strong>templateContext</strong> object and set the <strong>timeofDay</strong> option for it using the <strong>option(optionName, optionValue)</strong> method.</p>
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">var templateContext = Application.app.templateContext();
+function timeOfDayChangedHandler(currentTimeOfDay) {
+    templateContext.option("timeOfDay", currentTimeOfDay);
+}</pre></div>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Add_Commands_to_Views">Add Commands to Views</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>A view may include a functionality for performing operations. Suppose you want a view to contain "Back" and "Add" buttons. In an application designed for the iPhone, the "Back" button must be located on the left side of the title bar and the "Add" button must be located on the right side of the title bar. If you want to make an application for an Android phone, you will have to display the "Add" button on the bottom navbar, and not display the "Back" button at all, since the phone has a "Back" button built into the hardware. When implementing an application that will be run on both the iPhone and an Android phone, you will not only have to define two different layouts, but also create and manage different widgets for these platforms. To make things simpler, we offer you the ability to define a single view with two <strong>commands</strong>, so that you don't have to manually manage different widgets. We provide buttons created for commands that will work properly on both iPhone and Android devices; these buttons will also deliver a native user experience.</p>
+
+<p>A command is an abstract action associated with a view. Commands help you produce truly cross-platform applications with a native look and feel.</p>
+
+<p>Commands are declared in a view markup within a root element. To add a command, use a <a href="http://knockoutjs.com/documentation/binding-syntax.html">Knockout</a> binding syntax. Declare the command by using the <strong>data-bind</strong> attribute and pass the required <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxCommand/Configuration?version=14_2">markup options</a>. These options include: the command identifier, the handler to be performed when executing the command, as well as a title, an icon, and enabled and visible states.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: { name: 'home', title: 'Home' }"&gt;
+    &lt;div data-bind="dxCommand: { id: 'myCommand', onExecute: '#product-details', title: 'Add' } "&gt;&lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>A command's markup options can be bound to a ViewModel's fields. Here is an example.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView: { name: 'home', title: 'Home' }"&gt;
+    &lt;div data-bind="dxCommand: { id: 'myCommand', onExecute: add, title: 'Add' } "&gt;&lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>To function properly, the code above must be accompanied by the <strong>ViewModel</strong> object that exposes the "add" field. This field can be a function called when you are executing the Add command or a string/object representing the URL to navigate to. To learn how to define a URL using a string or an object, refer to the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Navigation_and_Routing/?version=14_2#Navigate_to_a_View">Navigate to a View</a> section.</p>
+
+<p>To display commands, the layout in which a view is displayed must include command containers. These are the elements in the layout markup that are marked by the <strong>data-options</strong> attribute set to <strong>dxCommandContainer</strong>. The following code demonstrates a command container that displays commands by toolbar items.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div class="layout-header"&gt;
+    &lt;div data-bind="dxToolbar: { items: [ { text: title, align: 'center' } ] }" 
+        data-options="dxCommandContainer : { id: 'my-container' }"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<p>As there can be several command containers in a layout, and the layout can have <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#Platform_Specific_Markup">several versions</a> - each for a certain platform/type of a device, you should declare that a particular command must be displayed in a particular command container. For this purpose, use the application's <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#commandMapping">command mapping</a>.</p>
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">new DevExpress.framework.HtmlApplication({
+    commandMapping: {
+        'my-container': {
+            defaults: {
+                'showIcon':false, 
+                'location':'before'
+            },
+            commands: [
+                {
+                    id: 'myCommand',
+                    location: 'after' // container defaults can be overriden
+                }
+            ]
+        }
+    }
+});</pre></div>
+
+<p>When using predefined layouts for views, put your commands to the command containers that are available in these layouts. To learn which command containers are available in these layouts, refer to the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Built-in_Layouts?version=14_2">Predefined Layouts</a> topic. An application loads default mapping of the "create", "edit", "save", "delete", "cancel" and "back" commands to the command containers of the predefined layouts, and then extends it by your custom command mapping declared within the application's configuration object. If you use the specified identifiers for your commands, these commands are automatically mapped to the command containers of the predefined layouts. It is only required to define a mapping for your custom commands. To learn what commands are mapped to the built-in layouts by default, refer to the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Built-in_Layouts?version=14_2#Default_Command_Mapping">Default Command Mapping</a> topic.</p>
+
+<!--
+![Commands](/Content/images/doc/14_2/PhoneJS/Commands.png)
+
+While a command's place is defined once - by the **location** option - the command will actually be displayed in different places on different devices. This is because a layout can have [several versions](Documentation/Howto/SPA_Framework/Views_and_Layouts#Platform_Specific_Markup) - each for a certain platform/type of a device, and there are different places for command locations in different layout versions. These places can be determined by the device platform's (or type's) guidelines, as well as by the choice of the layout's developer.-->
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="View_Life_Cycle">View Life Cycle</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>The replacement of a view with another view is initiated by invoking the <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Methods?version=14_2#navigateuri_options">navigate</a> method of the <strong>HtmlApplication</strong> object. When the application navigates to a view, the previous view is hidden or disposed. When it is hidden, this view can be restored from the cache quickly to be displayed again. When it is disposed, a new life cycle is initiated when the application navigates to this view repeatedly. All of the view life cycle steps are detailed below.</p>
+
+<ul>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#GetViewInfo">Get View Info</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#ShowLoadingStateView">Show a Loading State View</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#CreateViewModel">Create a View Model</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#RenderView">Render the View</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#ShowView">Show the View</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#HideView">Hide the View</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#DisplayViewRepeatedly">Display the View Repeatedly</a></p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#DisposeView">Dispose the View</a></p></li>
+</ul>
+
+<p><a id="GetViewInfo"></a></p><h4>1 - Get View Info</h4><p></p>
+
+<p><img src="./Views and Layouts_files/ViewLifeCycle_Step1.png" alt="Step 1">  </p>
+
+<p>When a view's display process begins, the only thing we know about the view is its name. It is the view name that is specified in the URI passed as the <strong>navigate</strong> function's parameter or the default view name specified in the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Navigation_and_Routing?version=14_2#Declare_a_Routing">routing rule</a>. To get more information about the view, the application's <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#viewCache">view cache</a> is used. Information on all views that are contained in the current <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Navigation_and_Routing?version=14_2">navigation history</a> is stored within the cache. However, there can be no information on a view in the cache, because the view was removed during the application flow, it has not been displayed before or the cache is <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#disableViewCache">disabled</a>. In this instance, the information on the view is gathered from scratch and added to the cache, so that the next time everything that is needed to display this view is contained in the cache.</p>
+
+<p><strong>viewInfo</strong> is an object that collects information on a view gathered during the whole view display process. At this step, the fields of this object provide the following information on the view.</p>
+
+<ul>
+<li><p><strong>viewName</strong><br>
+A string specifying the name of the displayed view.</p></li>
+<li><p><strong>routeData</strong><br>
+An object representing route parameters for the displayed view.</p></li>
+<li><p><strong>uri</strong><br>
+The URI to which the application is currently navigating.</p></li>
+<li><p><strong>viewTemplateInfo</strong><br>
+An object that provides the specified values of the dxView component options.</p></li>
+<li><p><strong>layoutController</strong><br>
+The controller that will be used to display the view within the layout markup. This controller, like all controllers that are registered in the application, is initialized beforehand. This means that the markup for the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#ShowLoadingStateView">loading state view</a> has already been prepared and view content can be placed in an empty layout template.</p>
+
+<p><img src="./Views and Layouts_files/BlankViewSubtraction.png" alt="Loading State View Withdrawing"></p>
+
+<p>Before the loading state view is shown, it is added to the layout transition element in an inactive state.</p>
+
+<p><img src="./Views and Layouts_files/LayoutWithInactiveBlankView.png" alt="Layout with Inactive Loading State View"></p></li>
+</ul>
+
+<p>The following events of the <strong>HTMLApplication</strong> object can be handled to change the flow of the view display at this step.</p>
+
+<ul>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#navigating">navigating</a><br>
+This event fires at the very beginning - before you search the view in the cache. Handle this event to cancel the display of the view, or to redirect to another view. For this purpose, use the <strong>cancel</strong> and <strong>uri</strong> fields of the object passed as a parameter.</p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#resolveLayoutController">resolveLayoutController</a><br>
+This event fires before an appropriate layout controller from the application's <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Built-in_Layouts?version=14_2#Ready-to-Use_Layout_Sets">layout set</a> is found, based on the current navigation context. Handle this event to set a custom layout controller for the displayed view. This layout controller will use the required layout template for the view.</p></li>
+</ul>
+
+<p><a id="ShowLoadingStateView"></a></p><h4>2 - Show a Loading State View</h4><p></p>
+
+<p><img src="./Views and Layouts_files/ViewLifeCycle_Step2.png" alt="Step 2"></p>
+
+<p>While performing all the preparations required to display the view, a quick response to an end-user is required. So, the loading state view that was prepared at the layout controller's <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#GetViewInfo">initialization</a> stage is shown first. Often, this loading state view contains a loading indicator provided by the layout content. In addition, the view's <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxView/Configuration?version=14_2#title">title</a> is shown by the layout content elements that are bound to the <strong>title</strong> variable.</p>
+
+<p>If this is the first view that is shown by the current layout controller, the layout template with the loading state view is added to the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Application_Project?version=14_2#Application_Page">view port</a> element of the application page. The loading state view becomes active and is shown with the specified <a href="http://js.devexpress.com/Documentation/ApiReference/Framework_Markup_Components/dxTransition?version=14_2">transition</a>.</p>
+
+<p><img src="./Views and Layouts_files/LayoutWithActiveBlankView.png" alt="Layout with Inactive Loading State View"></p>
+
+<p><a id="CreateViewModel"></a></p><h4>3 - Create a View Model</h4><p></p>
+
+<p><img src="./Views and Layouts_files/ViewLifeCycle_Step3.png" alt="Step 3">  </p>
+
+<p>To get the View Model object, a function with the same name as the view is searched in the application's <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#namespace">namespace</a>, and, if found, the function is called. The object returned by this function is the view's ViewModel.</p>
+
+<p>The following events of the <strong>HTMLApplication</strong> object can be handled to change the flow of the view display at this step.</p>
+
+<ul>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#beforeViewSetup">beforeViewSetup</a><br>
+This event fires before creating the ViewModel object. You can set a custom ViewModel object to be used for the view. To do this, add the <strong>model</strong> field to the <strong>viewInfo</strong> object. This object can be accessed using the <strong>viewInfo</strong> field of the object passed as a parameter.</p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#afterViewSetup">afterViewSetup</a><br>
+This event fires after the ViewModel object is created for the view. At this time, you can modify the created ViewModel object. It is available to you as the <strong>model</strong> field of the <strong>viewInfo</strong> object exposed by the parameter object.</p></li>
+</ul>
+
+<p><a id="RenderView"></a></p><h4>4 - Render the View</h4><p></p>
+
+<p><img src="./Views and Layouts_files/ViewLifeCycle_Step4.png" alt="Step 4">  </p>
+
+<p>When showing a view for the first time or when information on it has been removed from the <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#viewCache">cache</a>, the <strong>viewInfo</strong> object does not contain the <strong>renderResult</strong> field. At this step, the view is rendered and the result of rendering is assigned to this field.</p>
+
+<p>To be shown within the layout, the content of the view's dxContent elements is merged with the corresponding dxContentPlaceholder elements of the layout. The merge result is added to the corresponding dxTransition element of the layout as additional view markup in an inactive state.</p>
+
+<p><img src="./Views and Layouts_files/ViewRendering.png" alt="View Rendering"></p>
+
+<p><strong>NOTE</strong>: Only the markup that is added to the dxContent elements will be rendered to the resulting view.</p>
+
+<p>The following events of the <strong>HTMLApplication</strong> object can be handled to change the flow of the view display at this step.</p>
+
+<ul>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShowing">viewShowing</a><br>
+This event is raised before rendering (or showing, if the render result is available).</p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewRendered">viewRendered</a><br>
+This event fires after markup was rendered for the view. This markup can be accessed using the <strong>markup</strong> field of the <strong>renderResult</strong> object that is exposed by the <strong>viewInfo</strong> object passed as the event handler's parameter.</p></li>
+</ul>
+
+<p><a id="ShowView"></a></p><h4>5 - Show the View</h4><p></p>
+
+<p><img src="./Views and Layouts_files/ViewLifeCycle_Step5.png" alt="Step 5"></p>
+
+<p>To show the view, the inactive markup corresponding to this view is made active while the other markup elements, which correspond to the previously shown view, are made inactive.</p>
+
+<p><img src="./Views and Layouts_files/ShowView.png" alt="Show View"></p>
+
+<p><strong>NOTE</strong>: You can access the active view using the <em>$('.dx-active-view .my-selector')</em> selector.</p>
+
+<p>Handle the following event at this step.</p>
+
+<ul>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShown">viewShown</a><br>
+This event fires each time after a view is displayed. Handle this event to refresh data in the view each time the view is shown. Access the view's ViewModel using the <strong>model</strong> field of the object passed as the <strong>viewInfo</strong> parameter.</li>
+</ul>
+
+<p><a id="HideView"></a></p><h4>6- Hide the View</h4><p></p>
+
+<p>If the navigation to another view implies conserving the current view in the navigation history, the view markup becomes inactive. Information on the view is stored in the <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#viewCache">cache</a>.</p>
+
+<p>Handle the following event at this step.</p>
+
+<ul>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewHidden">viewHidden</a><br>
+This event fires each time after a view is hidden. Access the <strong>viewInfo</strong> object using the <strong>viewInfo</strong> field of the object passed as a parameter.</li>
+</ul>
+
+<p><a id="DisplayViewRepeatedly"></a></p><h4>7 - Display the View Repeatedly</h4><p></p>
+
+<p>The next time the application navigates to the view, the view is ready to be displayed if information on this view is stored in the <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#viewCache">cache</a>. If the previous view was displayed by the same layout controller, there is an "inactive" markup of the current view in the dxTransition element of the layout. So, the view is made active and the previous active content is made inactive.</p>
+
+<p><img src="./Views and Layouts_files/ShowViewRepeatedly.png" alt="Show View"></p>
+
+<p>If the layout controller of the previous view is not the controller of the displayed view, the previous controller is deactivated first. This means that the layout markup provided by this controller is removed from the <strong>view port</strong> element of the application page. The controller of the view that must be displayed is then activated. This means that the layout markup provided by this controller is inserted to the <strong>view port</strong> element of the application page.</p>
+
+<p>View-related events are raised in the following order:</p>
+
+<ul>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#navigating">navigating</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShowing">viewShowing</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShown">viewShown</a></li>
+</ul>
+
+<p><a id="DisposeView"></a></p><h4>8 - Dispose the View</h4><p></p>
+
+<p>The following events are raised when the current view is not displayed and information on this view has already been removed from the <a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Configuration?version=14_2#viewCache">cache</a>. </p>
+
+<ul>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewDisposing">viewDisposing</a><br>
+This event is raised before disposing of the view.</p></li>
+<li><p><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewDisposed">viewDisposed</a><br>
+This event is raised after disposing of the view.</p></li>
+</ul>
+
+                        
+
+
+                    </div>
+                </div>
+                <div class="documentationSection shiftedHeaders curr-light" style="margin-left: 0px">
+                    <h2 class="" id="Handle_View_Events">Handle View Events</h2>
+                    
+                    <div class="onlyChildHelper">
+                        <p>The <strong>HtmlApplication</strong> object exposes the <a href="http://js.devexpress.com/Documentation/Howto/SPA_Framework/Views_and_Layouts?version=14_2#View_Life_Cycle">events</a> that are raised for each view displayed in the application. You can handle these events to perform certain actions for all the views in the application. At the same time, you may need to handle a particular event for a certain view only. In such a case, add a field with the event's name to the view's ViewModel and assign the required function to it. The following is the list of the events that can be handled in this manner.</p>
+
+<ul>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShowing">viewShowing</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewRendered">viewRendered</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewShown">viewShown</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewHidden">viewHidden</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewDisposing">viewDisposing</a></li>
+<li><a href="http://js.devexpress.com/Documentation/ApiReference/Application_Framework/HtmlApplication/Events?version=14_2#viewDisposed">viewDisposed</a></li>
+</ul>
+
+<p>For instance, you can handle the <strong>viewShowing</strong> event to get the required data for the view. In the following example, the <strong>viewShown</strong> event is handled to set a focus to a particular numberbox on the view.</p>
+
+<div class="code-wrapper"><div class="code-type">HTML</div><pre class="prettyprint linenums">&lt;div data-options="dxView : { name: 'home' }"&gt;            
+    &lt;!-- ... --&gt;
+    &lt;div class="dx-fieldset"&gt;            
+        &lt;div class="dx-field"&gt;
+            &lt;div class="dx-field-label"&gt;Bill Total:&lt;/div&gt;                
+            &lt;div id="billTotalInput" class="dx-field-value" data-bind="dxNumberBox: { value: billTotal, placeholder: 'Type here...', valueChangeEvent: 'keyup', min: 0 }"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+
+<!-- -->
+
+<div class="code-wrapper"><div class="code-type">JavaScript</div><pre class="prettyprint linenums">MyApp.home = function(params) {
+    var billTotal = ko.observable(),
+    //...
+    function viewShown() {
+        $("#billTotalInput").dxNumberBox("instance").focus();
+    }
+    return {
+        billTotal: billTotal,
+        viewShown: viewShown,
+        //...
+    };
+};</pre></div>
+
+<p>See a step-by-step example in the <a href="http://js.devexpress.com/Documentation/Tutorial/SPA_Framework/Handle_View_Events?version=14_2#Handle_View_Events">Handle View Events</a> tutorial.</p>
+
+                        
+
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="footer">
+        <div class="footer-bottom">
+            <a href="http://js.devexpress.com/Privacy/" id="HrefPrivacy" title="Your Privacy - Legal Statements" class="privacy-link">Your Privacy - Legal Statements</a>
+            <a class="footer-logo" href="http://devexpress.com/" target="_blank"></a>
+            <div class="copyright">
+                <p>Copyright © 2011-2015 Developer Express Inc.</p>
+                <p>
+                    All trademarks or registered trademarks are property of their respective owners.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+                Site.initializeDocs(200);
+
+
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+<cloudnotetip style="display: none;"><style type="text/css" scoped="">#sogou-extension-cloudnote-feedback-tip{position: fixed;width: 262px;height: 88px;right: 10px;top: 10px;background: url(se-extension://ext-1977427434/img/contentscript/tip_bg.png) no-repeat;color: #555;font: 13px "arial,sans-serif", bold;z-index: 1000000000000;-webkit-user-select: none;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="close-btn"]{position: absolute;width: 12px;height: 13px;right: 19px;top: 16px;background: url(se-extension://ext-1977427434/img/contentscript/close.png) no-repeat;cursor: pointer;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="close-btn"]:hover{background-position: -12px 0;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="close-btn"]:active{background-position: -24px 0;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"]{text-align: center;line-height: 68px;height: 68px;padding: 7px 10px 0 10px;cursor: default;overflow: hidden;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-state]{display: -webkit-flex;-webkit-align-items: center;-webkit-justify-content: center;height: 100%;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-role="icon"]{display: inline-block;width: 18px;height: 18px;margin-right: 10px;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-state="ok"] [data-se-cloudnote-role="icon"]{background: url(se-extension://ext-1977427434/img/contentscript/icon_ok.png) no-repeat;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-state="error"] [data-se-cloudnote-role="icon"]{background: url(se-extension://ext-1977427434/img/contentscript/icon_error.png) no-repeat;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-state="unable"] [data-se-cloudnote-role="icon"]{background: url(se-extension://ext-1977427434/img/contentscript/icon_unable.png) no-repeat;}#sogou-extension-cloudnote-feedback-tip [data-se-cloudnote-role="content"] [data-se-cloudnote-hidden]{display: none;}</style><div id="sogou-extension-cloudnote-feedback-tip"><span data-se-cloudnote-role="close-btn"></span><div data-se-cloudnote-role="content"><div data-se-cloudnote-state="ok"><span data-se-cloudnote-role="icon"></span><span data-se-cloudnote-role="text">笔记保存成功！</span></div><div data-se-cloudnote-state="error" data-se-cloudnote-hidden=""><span data-se-cloudnote-role="icon"></span><span data-se-cloudnote-role="text">笔记保存失败！</span></div><div data-se-cloudnote-state="unable" data-se-cloudnote-hidden=""><span data-se-cloudnote-role="icon"></span><span data-se-cloudnote-role="text">此页面不支持保存！</span></div></div></div></cloudnotetip></body></html>

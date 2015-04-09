@@ -1,0 +1,64 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+html{
+	background:#fff;
+}
+body{
+	font:12px "宋体",Verdana,Arial,Tahoma; text-align: center; color:#000;
+}
+img{
+	border:none;
+}
+
+a{
+	color: #666;text-decoration:none;
+}
+a:hover{
+	color: #0165bb;text-decoration:none; cursor:pointer
+}
+ul{
+	list-style:none;
+}
+
+.head { width:960px; margin:0 auto; height:140px; padding-top:5px;position:relative;z-index:2;zoom:1;}
+.head_top { height:96px; background:#FFF url(../images/top_03.gif) no-repeat}
+.logo { float:left; margin-left:20px; margin-top:20px;}
+.qq {float:left; margin-left:20px; margin-top:20px; width:420px; overflow:hidden;}
+.head_top_right { float:right; margin-right:20px; width:280px;}
+.head_top_right p { text-align:right; line-height:24px; height:24px; overflow:hidden; float:right; margin-top:10px;}
+.head_top_right a.weibo { float:right; line-height:18px;margin-top:8px; margin-left:150px; background-color:#eedede;}
+.head_top_right span { text-align:right; float:right; line-height:24px;margin-top:8px;}
+#nav { height:43px;position:relative;background:url(../images/nav_03.gif) repeat-x;}
+#nav ul {}
+#nav ul li { float:left;line-height:43px; background:url(../images/line_04.gif) 109px 15px no-repeat; text-align:center; position:relative;display:inline;}
+#nav ul li a { color:#FFF; display:block; float:left; height:39px; width:102px; margin-top:2px; margin-left:3px; line-height:39px}
+#nav ul li a:hover { color:#CF3; background:url(../images/menu_03.gif) repeat-x;}
+#nav ul li ul {position: absolute;top: 40px;left: 2px;margin: 0px;padding: 0;background-color: #007AC7; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8;opacity: 0.8;display:none;}
+#nav ul li ul li { background:none; display:block; clear:both;position:relative;}
+#nav ul li ul li a {width:102px; display:block; height:27px; line-height:27px; margin:0; background:#007AC7}
+#nav ul li ul li a:hover {background-color: #03C}
+#nav ul li ul li ol { margin:0; padding:0;position:absolute; left:102px;top:0px;filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8;opacity: 0.8; display:none;*position: relative!important;*left:0px!important;}
+#nav ul li ul li ol li {display:block;}
+#nav ul li ul li ol li a {background: #06F;width:140px; display:block;}
+/*尾部*/
+.foot{width:940px;height:68px;margin:0 auto;line-height:24px;overflow:hidden; background-color:#FFF; text-align:left; padding:10px;}
+.foot a{color:black;margin: 0 5px;}
+.foot a:hover{color:#0165BB;}
+.foot_right{float:right;}
+.foot_left{float:left;}
+.clear {width: 0px;height: 0px;line-height: 0px;margin: 0px;padding: 0px;font-size: 0px;clear: both;}
+/*---------qq-----------------*/
+.bizmail_loginpanel{font-size:12px;width:300px;height:auto;background:#ffffff;}
+.bizmail_LoginBox{padding:10px 5px;}
+.bizmail_loginpanel h3{padding-bottom:5px;margin:0 0 5px 0;border-bottom:1px solid #cccccc;font-size:14px;}
+.bizmail_loginpanel form{margin:0;padding:0; width:410px;}
+.bizmail_loginpanel input.text{font-size:12px;width:90px;height:20px;margin:0 2px;border:1px solid #C3C3C3;border-color:#7C7C7C #C3C3C3 #C3C3C3 #9A9A9A;}
+.bizmail_loginpanel .bizmail_column{height:28px;}
+.bizmail_loginpanel .bizmail_column label{display:block;float:left;width:30px;height:24px;line-height:24px;font-size:12px;}
+.bizmail_loginpanel .bizmail_column .bizmail_inputArea{float:left;width:240px;}
+.bizmail_loginpanel .bizmail_column span{font-size:12px;word-wrap:break-word;margin-left: 2px;line-height:200%;}
+.bizmail_loginpanel .bizmail_SubmitArea{margin-left:30px;clear:both;}
+.bizmail_loginpanel .bizmail_SubmitArea a{font-size:12px;margin-left:5px;}
+.bizmail_loginpanel select{width:110px;height:20px;margin:0 2px;}
